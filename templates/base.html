@@ -67,7 +67,7 @@
     <div class="uk-container uk-container-center">
         <div class="uk-grid" data-uk-grid-margin>
 
-            <a class="mg-brand uk-navbar-brand uk-hidden-small" href="{{ SITEURL }}">{% if ALT_NAME %}{{ ALT_NAME }}{% else %}{{ SITENAME }}{% endif %}</a>
+            <a class="mg-brand uk-navbar-brand uk-hidden-small" href="{{ SITEURL }}"><i class="uk-icon-flag"></i> {{ SITENAME }}</a>
             <div class="mg-tagline uk-navbar-content uk-hidden-small">{% if SITESUBTITLE %}{{ SITESUBTITLE }}{% endif %}</div>
             <a class="uk-navbar-toggle uk-visible-small" href="#mg-offcanvas" data-uk-offcanvas></a>
             <a class="mg-brand uk-navbar-brand uk-navbar-center uk-visible-small" href="{{ SITEURL }}">{% if ALT_NAME %}{{ ALT_NAME }}{% else %}{{ SITENAME }}{% endif %}</a>
@@ -87,11 +87,26 @@
     
         <div class="uk-width-medium-1-5 uk-hidden-small">
             
+<!--
             <div class="uk-panel uk-panel-box">
                 <form class="uk-search" action="search.html" data-uk-search>
                     <input class="uk-search-field tipue_search" type="search" name="q" id="tipue_search_input" autocomplete="off" placeholder="Search...">
                 </form>
             </div>
+-->
+            <div class="uk-panel">
+                <div class="uk-button-dropdown" data-uk-dropdown>
+                    <button class="uk-button uk-button-danger"><i class="uk-icon-tags"></i>&nbsp;Tags</button>
+                    <div class="uk-dropdown">
+                        <ul class="uk-nav uk-nav-dropdown">
+                            {% for cat, _ in tags %}
+                            <li><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
 
             <div class="uk-panel uk-panel-box">
                 <ul class="uk-nav uk-nav-side">
@@ -99,6 +114,7 @@
                     {% for cat, _ in categories %}
                     <li {% if cat == category %}class="uk-active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
                     {% endfor %}
+
                     {% if DISPLAY_PAGES_ON_MENU != False %}
                     <li class="uk-nav-header">Pages</li>
                     
@@ -164,9 +180,11 @@
 <div id="mg-offcanvas" class="uk-offcanvas">
     <div class="uk-offcanvas-bar">
 
+        <!--
         <form class="uk-search" action="search.html" data-uk-search>
             <input class="uk-search-field" type="search" name="q" id="tipue_search_input" autocomplete="off" placeholder="Search...">
         </form>
+        -->
 
         <ul class="uk-nav uk-nav-offcanvas" data-uk-nav>
             <li class="uk-nav-header">Categories</li>

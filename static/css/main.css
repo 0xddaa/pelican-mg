@@ -1,5 +1,6 @@
 html {
-  font: 400 14px / 20px "Oswald", "Helvetica Neue",Helvetica,Arial,sans-serif; }
+//  font: 400 14px / 20px "Oswald", "Helvetica Neue",Helvetica,Arial,sans-serif; }
+  font: 400 14px / 20px "Noto Sans", "微軟正黑體", "Noto Sans", Arial, sans-serif; }
 
 a {
   color: #33b5e5; }
@@ -15,6 +16,12 @@ a {
     color: #444; }
 .uk-article-meta > .uk-icon-comment {
   color: #444; }
+
+.uk-article {
+  font-family:  "Noto Sans T Chinese Light", "微軟正黑體"}
+
+.uk-article-title {
+  font-family:  "Noto Sans", Arial}
 
 .uk-icon-twitter {
   color: #00B0ED; }
@@ -32,10 +39,10 @@ a {
   color: #444; }
 
 .uk-nav-side > li.uk-active > a {
-  background: #28D1B2; }
+  background: #FF8080; }
 
 .uk-pagination > .uk-active > span {
-  background: #28D1B2; }
+  background: #FF8080; }
 
 .uk-icon-medium {
   margin-right: 0.3em; }
@@ -67,7 +74,7 @@ a {
 
 .mg-header {
   padding: 1em 0;
-  background-color: #39B39D; }
+  background-color: #BA0000; }
 
 .mg-brand {
   font-family: "Open Sans", sans-serif;
@@ -136,7 +143,7 @@ a {
   background-color: #D34836; }
 .mg-icons-small .uk-icon-github {
   background-color: #333; }
-.mg-icons-small .uk-icon-envelope {
+.mg-icons-small .uk-icon-envelope-o {
   background-color: #059; }
 
 .mg-badges li {
