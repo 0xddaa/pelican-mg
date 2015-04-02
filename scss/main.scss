@@ -1,5 +1,5 @@
-$baseGreen: #39B39D;
-$accentGreen: #28D1B2;
+$baseRed: #BA0000;
+$accentRed: #FF8080;
 $feedOrange: #FF6600;
 $twitterBlue: #00B0ED;
 $facebookBlue: #3B5999;
@@ -13,7 +13,8 @@ $ancorOver: #0099cc;
 // Base style
 
 html {
-    font: 400 14px / 20px "Oswald", "Helvetica Neue",Helvetica,Arial,sans-serif;
+    //font: 400 14px / 20px "Oswald", "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font: 400 14px / 20px "Noto Sans", "微軟正黑體", "Noto Sans", Arial, sans-serif;
 }
 
 a {
@@ -43,6 +44,14 @@ a {
     }
 }
 
+.uk-article {
+  font-family:  "Noto Sans T Chinese Light", "微軟正黑體", Arial
+}
+
+.uk-article-title {
+  font-family:  "Noto Sans", Arial
+}
+
 .uk-icon-twitter {
     color: $twitterBlue;
 }
@@ -59,16 +68,16 @@ a {
     color: $githubBlack;
 }
 
-.uk-icon-envelope {
-    color: $textGrey;
+.uk-icon-envelope-o {
+    color: $googleRed;
 }
 
 .uk-nav-side > li.uk-active > a {
-    background: $accentGreen;
+    background: $accentRed;
 }
 
 .uk-pagination>.uk-active>span {
-    background: $accentGreen;   
+    background: $accentRed;   
 }
 
 .uk-icon-medium {
@@ -116,8 +125,8 @@ a {
 
 .mg-header {
     padding: 1em 0;
-    // Green style
-    background-color: $baseGreen;
+    // Red style
+    background-color: $baseRed;
 }
 
 .mg-brand {
@@ -127,7 +136,7 @@ a {
         size: 2.5em;
     }
 
-    // Green style
+    // Red style
     color: white;
     text-decoration: none;
 
@@ -226,8 +235,8 @@ a {
         background-color: $githubBlack;
     }
 
-    .uk-icon-envelope {
-        background-color: $mailBlue;
+    .uk-icon-envelope-o {
+        color: $googleRed;
     }
 }
 
