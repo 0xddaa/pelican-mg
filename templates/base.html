@@ -99,8 +99,17 @@
                     <button class="uk-button uk-button-danger"><i class="uk-icon-tags"></i>&nbsp;Tags</button>
                     <div class="uk-dropdown">
                         <ul class="uk-nav uk-nav-dropdown">
-                            {% for cat, _ in tags %}
-                            <li><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+                            <li class="uk-nav-header">CTF</li>
+                            {% for tag,_ in tags | sort %}
+                            {% if "CTF" in tag | string %}
+                            <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></li>
+                            {% endif %}
+                            {% endfor %}
+                            <li class="uk-nav-header">skill</li>
+                            {% for tag,_ in tags | sort %}
+                            {% if not "CTF" in tag | string %}
+                            <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></li>
+                            {% endif %}
                             {% endfor %}
                         </ul>
                     </div>
